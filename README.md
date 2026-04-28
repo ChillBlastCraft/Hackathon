@@ -1,2 +1,2 @@
 # Hackathon
-W3 for Mathametics 
+W3 for Mathemetics 
