@@ -22,6 +22,11 @@ header {
     padding: clamp(1rem, 3vw, 2rem) 0 0 0;
 }
 
+#logo {
+    width: clamp(170px, 12vw, 250px);
+    height: auto;
+}
+
 .header-top-row {
     display: flex;
     align-items: center;
