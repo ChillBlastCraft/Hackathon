@@ -53,6 +53,7 @@ header {
     font-size: clamp(1rem, 2vw, 1.2rem);
     transition: color 0.2s;
 }
+
 .header-content nav a:hover {
     color: var(--accent);
 }
@@ -62,6 +63,7 @@ header {
     align-items: center;
     gap: 0.5rem;
 }
+
 .search-bar input {
     padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
     border: 1px solid var(--border-c);
