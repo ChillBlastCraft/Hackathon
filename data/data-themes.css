@@ -5,4 +5,10 @@
     --text: #1F1F1F;
     --accent: #A78BFA;
     --highlight: #F59E0B;
+    --header-bg: #ede9fe;
+    --border-c: #d1d5db;
+    --accent-dark: #7c3aed;
+    --inverse-text: #fff;
+    --shadow-10: rgba(97, 56, 148, 0.10);
+    --shadow-25: rgba(97, 56, 148, 0.25);
 }

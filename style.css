@@ -1,1 +1,170 @@
 @import 'data/data-themes.css';
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100vw;
+    height: 100vh;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.5;
+}
+
+
+header {
+    background-color: var(--header-bg);
+    border-bottom: clamp(1px, 0.2vw, 2px) solid var(--border-c);
+    padding: clamp(1rem, 3vw, 2rem) 0 0 0;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1rem, 2vw, 2rem);
+    width: 100%;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+.icon {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--accent);
+    font-weight: bold;
+    user-select: none;
+}
+
+
+.header-content nav {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+.header-content nav a:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+.header-content nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: color 0.2s;
+}
+.header-content nav a:hover {
+    color: var(--accent);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.search-bar input {
+    padding: 0.5em 1em;
+    border: 1px solid var(--border-c);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.user-profile {
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.math-chapters {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+.math-chapters nav {
+    display: flex;
+    gap: 2.5rem;
+    width: auto;
+    justify-content: flex-start;
+}
+
+.math-chapters details {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+}
+
+.math-chapters summary {
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.5em;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.math-chapters summary {
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0.5em;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.math-chapters details {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    min-height: 2.2em;
+}
+
+.math-chapters summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 2.2em;
+    min-height: 2.2em;
+}
+
+.math-chapters ul {
+    list-style: none;
+    padding-left: 0.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    align-items: center;
+    margin: 0;
+    height: 2.2em;
+}
+
+.math-chapters li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.98em;
+    transition: color 0.2s;
+}
+
+.math-chapters li a:hover {
+    color: var(--accent);
+}
