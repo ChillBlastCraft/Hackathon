@@ -37,14 +37,6 @@ header {
     box-sizing: border-box;
 }
 
-.icon {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: var(--accent);
-    font-weight: bold;
-    user-select: none;
-}
-
-
 .header-content nav {
     display: flex;
     gap: clamp(1rem, 2vw, 2rem);
