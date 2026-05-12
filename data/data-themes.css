@@ -1,5 +1,10 @@
+/*
+ * Color scheme variables for the entire site. 
+ * This file is imported into all other CSS files, so the variables are available globally.
+ * Easy implementation for the future for Dark Mode via <body theme="dark"> and [theme="dark"] selectors.
+ */ 
+
 :root {
-    /* base colours */
     --main: #613894;
     --bg: #F7F5FB;
     --text: #1F1F1F;

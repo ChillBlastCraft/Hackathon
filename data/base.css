@@ -1,0 +1,16 @@
+@import '/data/data-themes.css';
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100vw;
+    height: 100vh;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.5;
+}

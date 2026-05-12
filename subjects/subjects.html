@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon, Mathematics</title>
+
+    <link rel="stylesheet" href="/data/base.css">
+    <link rel="stylesheet" href="/data/header.css">
+    <link rel="stylesheet" href="../data/footer.css">
+    <script defer src="/data/header.js"></script>
+
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+
 </head>
 <body>
     <header>
         <div class="header-top-row">
             <div class="icon">
-                <img src="data/images/MathLogo.png" alt="Mathematics Hub Logo" id="logo">
+                <a href="/index.html">
+                    <img src="/data/images/MathLogo.png" alt="Mathematics Hub Logo" id="logo">
+                </a>
             </div>
             <div class="header-content">
                 <nav>
@@ -21,16 +29,20 @@
                 </nav>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <div class="search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                </div>
             </div>
             <div class="user-profile">
+                <p>Placeholder [LOGIN]</p>
                 <!-- login / profile icon -->
             </div>
         </div>
         <div class="math-chapters">
             <nav>
                 <details>
-                    <summary>Math 1</summary>
+                    <summary onclick="toggleChapterSummary(this, event)">Math 1</summary>
                     <ul>
                         <li><a href="#">Chapter 1: Numbers</a></li>
                         <li><a href="#">Chapter 2: Algebra</a></li>
@@ -38,7 +50,7 @@
                     </ul>
                 </details>
                 <details>
-                    <summary>Math 2</summary>
+                    <summary onclick="toggleChapterSummary(this, event)">Math 2</summary>
                     <ul>
                         <li><a href="#">Chapter 1: Functions</a></li>
                         <li><a href="#">Chapter 2: Trigonometry</a></li>
@@ -49,22 +61,9 @@
         </div>
     </header>
 
-    <nav>
-        <details>
-            <ul>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>1</li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>2</li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>3</li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>4</li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>5</li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>6</li>
-            </ul>
-        </details>
-    </nav>
-
     <footer>
         <div class="footer-logo">
-            <!-- logo  -->
+            <img src="../data/images/MathLogo.png" alt="Mathematics Hub Logo">
             <span>Mathematics Hub</span>
         </div>
 
@@ -74,14 +73,19 @@
         </div>
 
         <div class="footer-links">
-            <a href="#">Schoolsoft</a> |
-            <a href="#">App- & Webbutveckling Application for LBS</a>
+            <a href="https://sms.schoolsoft.se/lbs/jsp/Login.jsp" target="_blank">Schoolsoft</a> |
+            <a href="https://lbs.se/lund/program/teknikprogrammet/ai-webbutveckling/" target="_blank">AI- & Webbutveckling Application for LBS</a>
         </div>
 
         <div class="footer-social">
-            <a href="#" title="Instagram">Instagram</a> |
-            <a href="#" title="Facebook">Facebook</a> |
-            <a href="#" title="Twitter">Twitter</a>
+            <a href="https://www.instagram.com/lbs_lund/" title="Instagram" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/LBSLund/" title="Facebook" target="_blank">Facebook</a> |
+        </div>
+
+        <div class="footer-contact">
+            <!-- mailto: w/ target="_blank" is bugged on certain browsers(at least since 2011) -->
+            <a href="mailto:lund@lbs.se" target="_blank">lund@lbs.se</a> |
+            <a href="tel:+4646124450">046-12 44 50</a>
         </div>
     </footer>
 </body>

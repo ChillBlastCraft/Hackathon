@@ -1,0 +1,195 @@
+@import '/data/data-themes.css';
+
+header {
+    background-color: var(--header-bg);
+    border-bottom: clamp(1px, 0.2vw, 2px) solid var(--border-c);
+    padding: clamp(1rem, 3vw, 2rem) 0 0 0;
+}
+
+#logo {
+    width: clamp(170px, 12vw, 250px);
+    height: auto;
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1rem, 2vw, 2rem);
+    width: 100%;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+.header-content nav {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.header-content nav a:not(:last-child) {
+    margin-right: clamp(1rem, 2vw, 2rem);
+}
+
+.header-content nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: color 0.2s;
+}
+
+.header-content nav a:hover {
+    color: var(--accent);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-bar .search-input-wrap {
+    position: relative;
+}
+
+.search-bar .search-input-wrap i {
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateY(-50%);
+    color: var(--main);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.search-bar input {
+    padding: 0.5em 2.1em 0.5em 1em;
+    border: 1px solid var(--border-c);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.user-profile {
+    min-width: clamp(40px, 4vw, 50px);
+    min-height: clamp(40px, 4vw, 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.math-chapters {
+    width: 100%;
+    margin-top: clamp(0.5rem, 0.9vw, 0.9rem);
+    padding: 0 clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+.math-chapters nav {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2.5rem);
+    width: auto;
+    justify-content: flex-start;
+}
+
+.math-chapters details {
+    /*
+     * Keep each chapter control inline while still scaling with viewport width.
+     * clamp() prevents text from becoming too small on mobile or too large on wide screens.
+     */
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-right: clamp(1rem, 3vw, 2.5rem);
+}
+
+.math-chapters details ul {
+    /*
+     * Hidden state for left-to-right reveal animation.
+     * max-width + overflow clips content so text appears to slide in from the left.
+     */
+    opacity: 0;
+    transform: translateX(-0.6rem);
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-width 0.36s ease, opacity 0.3s ease, transform 0.36s ease;
+}
+
+.math-chapters details[open] ul {
+    /*
+     * Open state expands enough to fit long chapter labels without clipping.
+     */
+    opacity: 1;
+    transform: translateX(0);
+    max-width: 90rem;
+    pointer-events: auto;
+}
+
+.math-chapters details.is-closing > ul {
+    /*
+     * JS applies .is-closing briefly so close animation can finish
+     * before the native <details> element removes its open state.
+     */
+    display: flex;
+    opacity: 0;
+    transform: translateX(-0.6rem);
+    max-width: 0;
+    pointer-events: none;
+}
+
+.math-chapters summary {        
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 2.2em;
+    min-height: 2.2em;
+    min-width: clamp(85px, 8vw, 110px);
+    width: clamp(85px, 8vw, 110px);
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    text-align: left;
+    user-select: none;
+}
+
+.math-chapters ul {
+    /*
+     * Horizontal chapter row; no wrapping so labels do not jump to a second line
+     * while max-width is animating.
+     */
+    list-style: none;
+    padding-left: clamp(0.35rem, 0.7vw, 0.7rem);
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.9rem, 2vw, 1.5rem);
+    align-items: center;
+    margin: 0;
+    user-select: none;
+}
+
+.math-chapters li {
+    white-space: nowrap;
+}
+
+.math-chapters li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.98em;
+    transition: color 0.2s;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.math-chapters li a:hover {
+    color: var(--accent);
+}
