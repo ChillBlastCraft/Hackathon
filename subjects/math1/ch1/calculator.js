@@ -126,7 +126,7 @@ let expr = '';
             return s;
         }
 
-function evaluate() {
+function calcEvaluate() {
     if (!expr) return;
 
     try {
@@ -197,7 +197,7 @@ function evaluate() {
             else if (e.key === '(') input('(');
             else if (e.key === ')') input(')');
             else if (e.key === '%') input('mod');
-            else if (e.key === 'Enter' || e.key === '=') evaluate();
+            else if (e.key === 'Enter' || e.key === '=') calcEvaluate();
             else if (e.key === 'Backspace') delChar();
             else if (e.key === 'Escape') clearAll();
         });
