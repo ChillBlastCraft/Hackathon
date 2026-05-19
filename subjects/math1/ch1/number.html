@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon, Mathematics</title>
+
+    <link rel="stylesheet" href="/data/base.css">
+    <link rel="stylesheet" href="/data/header.css">
+    <link rel="stylesheet" href="/data/footer.css">
+    <script defer src="/data/header.js"></script>
+    <script defer src="calculator.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-top-row">
+            <div class="icon">
+                <a href="/index.html">
+                    <img src="/data/images/MathLogo.png" alt="Mathematics Hub Logo" id="logo">
+                </a>
+            </div>
+            <div class="header-content">
+                <nav>
+                    <a href="/subjects/subjects.html">Subjects</a>
+                    <a href="/exercises/exercises.html">Exercises</a>
+                    <a href="/tests/tests.html">Tests & Exams</a>
+                </nav>
+            </div>
+            <div class="search-bar">
+                <div class="search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                </div>
+            </div>
+            <div class="user-profile">
+                <p>Placeholder [LOGIN]</p>
+                <!-- login / profile icon -->
+            </div>
+        </div>
+        <div class="math-chapters">
+            <nav>
+                <details>
+                    <summary onclick="toggleChapterSummary(this, event)">Math 1</summary>
+                    <ul>
+                        <li><a href="#">Chapter 1: Numbers</a></li>
+                        <li><a href="#">Chapter 2: Algebra</a></li>
+                        <li><a href="#">Chapter 3: Geometry</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary onclick="toggleChapterSummary(this, event)">Math 2</summary>
+                    <ul>
+                        <li><a href="#">Chapter 1: Functions</a></li>
+                        <li><a href="#">Chapter 2: Trigonometry</a></li>
+                        <li><a href="#">Chapter 3: Probability</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+        <div class="page-content">
+
+        <!--LEFT: Sub-chapter navigation-->
+        <aside class="sidebar-left">
+            <h3>Chapter 2 — Algebra</h3>
+            <ul>
+                <li><a href="#" class="active"><span class="dot"></span>Introduction to Algebra</a></li>
+                <li><a href="#"><span class="dot"></span>Variables &amp; Expressions</a></li>
+                <li><a href="#"><span class="dot"></span>Solving Linear Equations</a></li>
+                <li><a href="#"><span class="dot"></span>Inequalities</a></li>
+                <li><a href="#"><span class="dot"></span>Systems of Equations</a></li>
+                <li><a href="#"><span class="dot"></span>Polynomials</a></li>
+                <li><a href="#"><span class="dot"></span>Factoring</a></li>
+                <li><a href="#"><span class="dot"></span>Quadratic Equations</a></li>
+                <li><a href="#"><span class="dot"></span>Rational Expressions</a></li>
+                <li><a href="#"><span class="dot"></span>Exponents &amp; Radicals</a></li>
+                <li><a href="#"><span class="dot"></span>Algebraic Word Problems</a></li>
+                <li><a href="#"><span class="dot"></span>Chapter Review</a></li>
+            </ul>
+        </aside>
+
+        <!--MIDDLE: Chapter content-->
+        <main class="main-content">
+            <nav class="chapter-breadcrumb" aria-label="Breadcrumb">
+                <a href="#">Math 1</a>
+                <span>›</span>
+                <a href="#">Chapter 2</a>
+                <span>›</span>
+                Introduction to Algebra
+            </nav>
+
+            <span class="chapter-tag">Math 1 · Chapter 2</span>
+            <h1>Introduction to Algebra</h1>
+
+            <p>
+                Algebra is a branch of mathematics dealing with symbols and the rules for manipulating those symbols.
+                Those symbols represent quantities without fixed values, known as <strong>variables</strong>.
+                Algebra forms the foundation for almost all higher mathematics and is essential in science, engineering, and everyday problem-solving.
+            </p>
+
+            <div class="info-box">
+                💡 <strong>Key idea:</strong> In algebra, letters like <em>x</em>, <em>y</em>, and <em>z</em> stand in for unknown numbers.
+                The goal is usually to find what value of the variable makes an equation true.
+            </div>
+
+            <h2>What is a Variable?</h2>
+            <p>
+                A <strong>variable</strong> is a symbol (usually a letter) used to represent an unknown or changeable value.
+                For example, in the expression <code>x + 5</code>, the letter <em>x</em> is a variable —
+                it can take on different values such as 2, 10, or −3.
+            </p>
+
+            <h3>Expressions vs. Equations</h3>
+            <p>
+                An <strong>expression</strong> is a combination of numbers, variables, and operations (like + or ×) that does <em>not</em> contain an equals sign.
+                An <strong>equation</strong> states that two expressions are equal, using the <code>=</code> sign.
+            </p>
+
+            <div class="example-box">
+                <div class="example-label">Example</div>
+                <div class="math-display">
+                    Expression: &nbsp;&nbsp; 3x + 7<br>
+                    Equation: &nbsp;&nbsp;&nbsp; 3x + 7 = 16
+                </div>
+            </div>
+
+            <h2>Solving a Linear Equation</h2>
+            <p>
+                A <strong>linear equation</strong> has one variable raised to the first power.
+                Solving it means finding the value of the variable that makes the equation true.
+                Use inverse operations to isolate the variable — whatever you do to one side, you must do to the other.
+            </p>
+
+            <div class="example-box">
+                <div class="example-label">Step-by-step example — Solve: 2x + 4 = 12</div>
+                <div class="math-display">
+                    Step 1: Subtract 4 from both sides<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2x = 8<br><br>
+                    Step 2: Divide both sides by 2<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x = 4
+                </div>
+            </div>
+
+            <h2>The General Form</h2>
+            <p>The standard form of a linear equation in one variable is:</p>
+            <div class="formula">ax + b = c</div>
+            <p>
+                where <em>a</em>, <em>b</em>, and <em>c</em> are known numbers and <em>x</em> is the unknown.
+                The solution is <code>x = (c − b) / a</code>, provided <em>a ≠ 0</em>.
+            </p>
+
+            <h2>Why Does Algebra Matter?</h2>
+            <p>
+                Algebra appears everywhere: calculating the best phone plan, figuring out how long a road trip will take,
+                balancing a budget, or writing a computer program. Mastering algebra unlocks every field that relies on
+                logical reasoning and quantitative thinking.
+            </p>
+
+            <!-- Bottom navigation -->
+            <nav class="chapter-nav" aria-label="Chapter navigation">
+                <a href="#">← Previous: Chapter 1 — Numbers</a>
+                <a href="#">Next: Variables &amp; Expressions →</a>
+            </nav>
+        </main>
+
+        <!--right calculator-->
+        <aside class="sidebar-right" aria-label="Scientific calculator">
+            <div class="calc-title">Scientific Calculator</div>
+
+            <!-- Angle mode toggle -->
+            <div class="calc-mode-row">
+                <button class="mode-btn active" id="btn-deg" onclick="setMode('deg')">DEG</button>
+                <button class="mode-btn" id="btn-rad" onclick="setMode('rad')">RAD</button>
+            </div>
+
+            <!-- Display -->
+            <div class="calc-display">
+                <div class="calc-expr" id="calc-expr"></div>
+                <div class="calc-result" id="calc-result">0</div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="calc-grid">
+
+                <!-- Row 1: memory -->
+                <button class="calc-btn btn-mem" onclick="mc()">MC</button>
+                <button class="calc-btn btn-mem" onclick="mr()">MR</button>
+                <button class="calc-btn btn-mem" onclick="ms()">MS</button>
+                <button class="calc-btn btn-mem" onclick="mplus()">M+</button>
+                <button class="calc-btn btn-mem" onclick="mminus()">M−</button>
+
+                <!-- Row 2: scientific top -->
+                <button class="calc-btn btn-fn" onclick="fn('2nd')">2nd</button>
+                <button class="calc-btn btn-fn" onclick="fn('pi')">π</button>
+                <button class="calc-btn btn-fn" onclick="fn('e')">e</button>
+                <button class="calc-btn btn-clear" onclick="clearEntry()">CE</button>
+                <button class="calc-btn btn-clear" onclick="clearAll()">C</button>
+
+                <!-- Row 3 -->
+                <button class="calc-btn btn-fn" onclick="fn('x2')">x²</button>
+                <button class="calc-btn btn-fn" onclick="fn('x3')">x³</button>
+                <button class="calc-btn btn-fn" onclick="fn('xn')">xⁿ</button>
+                <button class="calc-btn btn-fn" onclick="fn('ex')">eˣ</button>
+                <button class="calc-btn btn-fn" onclick="fn('10x')">10ˣ</button>
+
+                <!-- Row 4 -->
+                <button class="calc-btn btn-fn" onclick="fn('sqrt')">√</button>
+                <button class="calc-btn btn-fn" onclick="fn('cbrt')">∛</button>
+                <button class="calc-btn btn-fn" onclick="fn('nrt')">ⁿ√</button>
+                <button class="calc-btn btn-fn" onclick="fn('ln')">ln</button>
+                <button class="calc-btn btn-fn" onclick="fn('log')">log</button>
+
+                <!-- Row 5 -->
+                <button class="calc-btn btn-fn" onclick="fn('sin')">sin</button>
+                <button class="calc-btn btn-fn" onclick="fn('cos')">cos</button>
+                <button class="calc-btn btn-fn" onclick="fn('tan')">tan</button>
+                <button class="calc-btn btn-fn" onclick="fn('abs')">|x|</button>
+                <button class="calc-btn btn-fn" onclick="fn('inv')">1/x</button>
+
+                <!-- Row 6 -->
+                <button class="calc-btn btn-fn" onclick="fn('asin')">sin⁻¹</button>
+                <button class="calc-btn btn-fn" onclick="fn('acos')">cos⁻¹</button>
+                <button class="calc-btn btn-fn" onclick="fn('atan')">tan⁻¹</button>
+                <button class="calc-btn btn-fn" onclick="fn('fact')">n!</button>
+                <button class="calc-btn btn-fn" onclick="fn('pct')">%</button>
+
+                <!-- Row 7: parens + ops -->
+                <button class="calc-btn btn-op" onclick="input('(')">(</button>
+                <button class="calc-btn btn-op" onclick="input(')')">)</button>
+                <button class="calc-btn btn-op" onclick="input('EE')">EE</button>
+                <button class="calc-btn btn-op" onclick="toggleSign()">+/−</button>
+                <button class="calc-btn btn-op" onclick="input('÷')">÷</button>
+
+                <!-- Row 8 -->
+                <button class="calc-btn btn-num" onclick="input('7')">7</button>
+                <button class="calc-btn btn-num" onclick="input('8')">8</button>
+                <button class="calc-btn btn-num" onclick="input('9')">9</button>
+                <button class="calc-btn btn-op" onclick="delChar()">⌫</button>
+                <button class="calc-btn btn-op" onclick="input('×')">×</button>
+
+                <!-- Row 9 -->
+                <button class="calc-btn btn-num" onclick="input('4')">4</button>
+                <button class="calc-btn btn-num" onclick="input('5')">5</button>
+                <button class="calc-btn btn-num" onclick="input('6')">6</button>
+                <button class="calc-btn btn-op" onclick="input('Exp')">Exp</button>
+                <button class="calc-btn btn-op" onclick="input('−')">−</button>
+
+                <!-- Row 10 -->
+                <button class="calc-btn btn-num" onclick="input('1')">1</button>
+                <button class="calc-btn btn-num" onclick="input('2')">2</button>
+                <button class="calc-btn btn-num" onclick="input('3')">3</button>
+                <button class="calc-btn btn-op" onclick="input('mod')">mod</button>
+                <button class="calc-btn btn-op" onclick="input('+')">+</button>
+
+                <!-- Row 11 -->
+                <button class="calc-btn btn-fn" onclick="fn('rand')">Rand</button>
+                <button class="calc-btn btn-num btn-span2" onclick="input('0')">0</button>
+                <button class="calc-btn btn-num" onclick="input('.')">.</button>
+                <button class="calc-btn btn-eq" onclick="evaluate()">=</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../data/images/MathLogo.png" alt="Mathematics Hub Logo">
+            <span>Mathematics Hub</span>
+        </div>
+
+        <div class="footer-info">
+            <p>&copy; 2026 Mathematics Hub. All rights reserved.</p>
+            <p>Created as a final assignment for the LBS course.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://sms.schoolsoft.se/lbs/jsp/Login.jsp" target="_blank">Schoolsoft</a> |
+            <a href="https://lbs.se/lund/program/teknikprogrammet/ai-webbutveckling/" target="_blank">AI- & Webbutveckling Application for LBS</a>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/lbs_lund/" title="Instagram" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/LBSLund/" title="Facebook" target="_blank">Facebook</a> |
+        </div>
+
+        <div class="footer-contact">
+            <!-- mailto: w/ target="_blank" is bugged on certain browsers(at least since 2011) -->
+            <a href="mailto:lund@lbs.se" target="_blank">lund@lbs.se</a> |
+            <a href="tel:+4646124450">046-12 44 50</a>
+        </div>
+    </footer>
+</body>
+</html>
