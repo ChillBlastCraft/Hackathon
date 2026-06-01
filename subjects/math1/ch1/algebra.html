@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="user-profile">
-                <a href="/user_profile/login.html">Log in</a>
+                <p><a href="/user_profile/login.html">Log in</a></p>
                 <!-- login / profile icon -->
             </div>
         </div>
@@ -66,9 +66,9 @@
 
         <!--LEFT: Sub-chapter navigation-->
         <aside class="sidebar-left">
-            <h3>Chapter 1 — Number</h3>
+            <h3>Chapter 2 — Algebra</h3>
             <ul>
-                <li><a href="#" class="active"><span class="dot"></span>Introduction to Number</a></li>
+                <li><a href="#" class="active"><span class="dot"></span>Introduction to Algebra</a></li>
                 <li><a href="#"><span class="dot"></span>Variables &amp; Expressions</a></li>
                 <li><a href="#"><span class="dot"></span>Solving Linear Equations</a></li>
                 <li><a href="#"><span class="dot"></span>Inequalities</a></li>
@@ -78,7 +78,7 @@
                 <li><a href="#"><span class="dot"></span>Quadratic Equations</a></li>
                 <li><a href="#"><span class="dot"></span>Rational Expressions</a></li>
                 <li><a href="#"><span class="dot"></span>Exponents &amp; Radicals</a></li>
-                <li><a href="#"><span class="dot"></span>Numberic Word Problems</a></li>
+                <li><a href="#"><span class="dot"></span>Algebraic Word Problems</a></li>
                 <li><a href="#"><span class="dot"></span>Chapter Review</a></li>
             </ul>
         </aside>
@@ -90,20 +90,20 @@
                 <span>›</span>
                 <a href="#">Chapter 2</a>
                 <span>›</span>
-                Introduction to Number
+                Introduction to Algebra
             </nav>
 
             <span class="chapter-tag">Math 1 · Chapter 2</span>
-            <h1>Introduction to Number</h1>
+            <h1>Introduction to Algebra</h1>
 
             <p>
-                Number is a branch of mathematics dealing with symbols and the rules for manipulating those symbols.
+                Algebra is a branch of mathematics dealing with symbols and the rules for manipulating those symbols.
                 Those symbols represent quantities without fixed values, known as <strong>variables</strong>.
-                Number forms the foundation for almost all higher mathematics and is essential in science, engineering, and everyday problem-solving.
+                Algebra forms the foundation for almost all higher mathematics and is essential in science, engineering, and everyday problem-solving.
             </p>
 
             <div class="info-box">
-                💡 <strong>Key idea:</strong> In Number, letters like <em>x</em>, <em>y</em>, and <em>z</em> stand in for unknown numbers.
+                💡 <strong>Key idea:</strong> In algebra, letters like <em>x</em>, <em>y</em>, and <em>z</em> stand in for unknown numbers.
                 The goal is usually to find what value of the variable makes an equation true.
             </div>
 
@@ -153,16 +153,17 @@
                 The solution is <code>x = (c − b) / a</code>, provided <em>a ≠ 0</em>.
             </p>
 
-            <h2>Why Does Number Matter?</h2>
+            <h2>Why Does Algebra Matter?</h2>
             <p>
-                Number appears everywhere: calculating the best phone plan, figuring out how long a road trip will take,
-                balancing a budget, or writing a computer program. Mastering Number unlocks every field that relies on
+                Algebra appears everywhere: calculating the best phone plan, figuring out how long a road trip will take,
+                balancing a budget, or writing a computer program. Mastering algebra unlocks every field that relies on
                 logical reasoning and quantitative thinking.
             </p>
 
             <!-- Bottom navigation -->
             <nav class="chapter-nav" aria-label="Chapter navigation">
-                <a href="algebra.html">Next: Algebra →</a>
+                <a href="number.html">← Previous: Chapter 1 — Numbers</a>
+                <a href="#">Next: Variables &amp; Expressions →</a>
             </nav>
         </main>
 
@@ -280,10 +281,10 @@
         </div>
     </footer>
 
-    <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
 
-    const nextBtn = document.querySelector('.chapter-nav a');
+    const nextBtn = document.querySelector('.chapter-nav a:last-child');
 
     if (!nextBtn) return;
 
@@ -294,8 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         session.progress = session.progress || {};
 
-        // Numbers completed = 50%
-        session.progress['1c'] = 33;
+        // Algebra completed = 100%
+        session.progress['1c'] = 66;
 
         localStorage.setItem(
             'mh_session',
