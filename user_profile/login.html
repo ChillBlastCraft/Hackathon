@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | Mathematics Hub</title>
+
+<link rel="stylesheet" href="/data/base.css">
+<link rel="stylesheet" href="/data/header.css">
+<link rel="stylesheet" href="/data/footer.css">
+<link rel="stylesheet" href="login.css">
+
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"crossorigin="anonymous"referrerpolicy="no-referrer">
+
+<script defer src="/data/header.js"></script>
+<script defer src="login.js"></script>
+
+
+</head>
+<body>
+
+<header>
+    <div class="header-top-row">
+        <div class="icon">
+            <a href="index.html">
+                <img src="/data/images/MathLogo.png"
+                     alt="Mathematics Hub Logo"
+                     id="logo">
+            </a>
+        </div>
+
+        <div class="header-content">
+            <nav>
+                <a href="/subjects/subjects.html">Subjects</a>
+                <a href="/exercises/exercises.html">Exercises</a>
+                <a href="/tests/tests.html">Tests & Exams</a>
+            </nav>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-input-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <div class="user-profile">
+            Login
+        </div>
+    </div>
+
+    <div class="math-chapters">
+        <nav>
+            <details>
+                <summary onclick="toggleChapterSummary(this,event)">
+                    Math 1
+                </summary>
+                <ul>
+                    <li><a href="#">Numbers</a></li>
+                    <li><a href="#">Algebra</a></li>
+                    <li><a href="#">Geometry</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary onclick="toggleChapterSummary(this,event)">
+                    Math 2
+                </summary>
+                <ul>
+                    <li><a href="#">Functions</a></li>
+                    <li><a href="#">Trigonometry</a></li>
+                    <li><a href="#">Probability</a></li>
+                </ul>
+            </details>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="card">
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('login')">Log in</div>
+    <div class="tab"        onclick="switchTab('register')">Creat acount</div>
+  </div>
+
+  <!-- ══ LOGIN ══ -->
+ <div class="panel active" id="panel-login">
+  <h2>Welcome Back</h2>
+  <p class="sub">Log in to continue your math journey</p>
+
+  
+
+  <form onsubmit="handleLogin(event)">
+    <div class="fg">
+      <label>Email or Username</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-envelope"></i>
+        <input type="text" id="l-id" placeholder="you@example.com" autocomplete="username">
+      </div>
+      <div class="err" id="l-id-err">Enter an email address or username.</div>
+    </div>
+
+    <div class="fg">
+      <label>Password</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-lock"></i>
+        <input type="password" id="l-pw" placeholder="••••••••" autocomplete="current-password">
+        <button type="button" class="toggle-pw" onclick="tpw('l-pw','l-pw-i')">
+          <i id="l-pw-i" class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+      <div class="err" id="l-pw-err">Enter your password.</div>
+    </div>
+    <div class="gerr" id="login-gerr"></div>
+
+    <button type="submit" class="btn-sub">
+      <span id="l-btxt">Log In</span>
+      <div class="spinner" id="l-spin"></div>
+    </button>
+  </form>
+</div>
+
+<!-- ══ REGISTER ══ -->
+<div class="panel" id="panel-register">
+  <h2>Create Account</h2>
+  <p class="sub">Free to get started — no credit card required</p>
+
+  <div class="gerr" id="reg-gerr"></div>
+  <div class="gok"  id="reg-ok"></div>
+
+  <form onsubmit="handleRegister(event)">
+    <div class="fg">
+      <label>Email Address</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-envelope"></i>
+        <input type="text" id="r-email" placeholder="you@example.com" autocomplete="email">
+      </div>
+      <div class="err" id="r-email-err">Enter an email address.</div>
+    </div>
+
+    <div class="fg">
+      <label>Username</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-user"></i>
+        <input type="text" id="r-user" placeholder="your_name" autocomplete="off" oninput="checkUname()">
+      </div>
+      <div class="err" id="r-user-err"></div>
+      <div class="uname-hint" id="uname-hint"></div>
+    </div>
+
+    <div class="fg">
+      <label>Password</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-lock"></i>
+        <input type="password" id="r-pw" placeholder="At least 6 characters" autocomplete="new-password" oninput="checkStr()">
+        <button type="button" class="toggle-pw" onclick="tpw('r-pw','r-pw-i')">
+          <i id="r-pw-i" class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+      <div class="str-bar" id="str-bar"><div class="str-fill" id="str-fill"></div></div>
+      <div class="str-hint" id="str-hint"></div>
+      <div class="err" id="r-pw-err">The password must be at least 6 characters long.</div>
+    </div>
+
+    <div class="fg">
+      <label>Confirm Password</label>
+      <div class="iw">
+        <i class="fi fa-solid fa-lock"></i>
+        <input type="password" id="r-pw2" placeholder="Repeat password" autocomplete="new-password">
+        <button type="button" class="toggle-pw" onclick="tpw('r-pw2','r-pw2-i')">
+          <i id="r-pw2-i" class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+      <div class="err" id="r-pw2-err">Passwords do not match.</div>
+    </div>
+
+    <button type="submit" class="btn-sub">
+      <span id="r-btxt">Create Account</span>
+      <div class="spinner" id="r-spin"></div>
+    </button>
+  </form>
+</div>
+
+<footer>
+
+    <div class="footer-logo">
+        <img src="/data/images/MathLogo.png"
+             alt="Mathematics Hub Logo">
+        <span>Mathematics Hub</span>
+    </div>
+
+    <div class="footer-info">
+        <p>&copy; 2026 Mathematics Hub. All rights reserved.</p>
+        <p>Created as a final assignment for the LBS course.</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="https://sms.schoolsoft.se/lbs/jsp/Login.jsp">
+            Schoolsoft
+        </a>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://www.instagram.com/lbs_lund/">
+            Instagram
+        </a>
+    </div>
+
+</footer>
+</body>
+</html>

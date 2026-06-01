@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Profile | Mathematics Hub</title>
+
+  <link rel="stylesheet" href="/data/base.css">
+  <link rel="stylesheet" href="/data/header.css">
+  <link rel="stylesheet" href="/data/footer.css">
+  <link rel="stylesheet" href="profile.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <script defer src="/data/header.js"></script>
+  <script defer src="profile.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-top-row">
+
+      <div class="icon">
+        <a href="index.html">
+          <img src="/data/images/MathLogo.png" alt="Mathematics Hub Logo" id="logo">
+        </a>
+      </div>
+
+      <div class="header-content">
+        <nav>
+          <a href="/subjects/subjects.html">Subjects</a>
+          <a href="/exercises/exercises.html">Exercises</a>
+          <a href="/tests/tests.html">Tests & Exams</a>
+        </nav>
+      </div>
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+      </div>
+
+      <div class="user-profile">
+        <div class="xp-badge">
+        <span id="topXp">0</span> XP
+        </div>
+      </div>
+
+    </div>
+
+    <div class="math-chapters">
+      <nav>
+
+        <details>
+          <summary onclick="toggleChapterSummary(this,event)">
+            Math 1
+          </summary>
+          <ul>
+            <li><a href="#">Numbers</a></li>
+            <li><a href="#">Algebra</a></li>
+            <li><a href="#">Geometry</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary onclick="toggleChapterSummary(this,event)">
+            Math 2
+          </summary>
+          <ul>
+            <li><a href="#">Functions</a></li>
+            <li><a href="#">Trigonometry</a></li>
+            <li><a href="#">Probability</a></li>
+          </ul>
+        </details>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="profile-hero">
+
+      <div class="profile-top">
+
+        <div class="profile-user">
+
+          <div class="avatar" id="avBtn">
+            ??
+          </div>
+
+          <div>
+            <h1 id="hiName">Hello!</h1>
+            <p>Mathematics Hub Student</p>
+          </div>
+
+        </div>
+
+        <div class="profile-actions">
+
+          <div class="xp-badge">
+            Total XP:
+            <span id="sXP">0</span>
+          </div>
+
+          <button class="logout-btn" onclick="logout()">
+            Logout
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <h3 id="sXP2">0</h3>
+        <p>Total XP</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="sLe">0</h3>
+        <p>Lessons</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="sEx">0</h3>
+        <p>Exercises</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>0</h3>
+        <p>Quizzes</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="streakNum">0</h3>
+        <p>Day Streak</p>
+      </div>
+
+    </section>
+
+    <section class="dashboard-row">
+      <div class="panel">
+
+        <h2>Learning Streak</h2>
+        <p class="panel-subtitle">
+          Keep your streak alive by studying every day.
+        </p>
+
+        <div class="streak-number" id="streakBig">
+          0
+        </div>
+
+        <div class="streak-label">
+          Consecutive Days
+        </div>
+
+        <div class="week-row">
+
+          <div class="day-box" id="d1">
+            <strong>M</strong>
+          </div>
+
+          <div class="day-box" id="d2">
+            <strong>T</strong>
+          </div>
+
+          <div class="day-box" id="d3">
+            <strong>W</strong>
+          </div>
+
+          <div class="day-box" id="d4">
+            <strong>T</strong>
+          </div>
+
+          <div class="day-box" id="d5">
+            <strong>F</strong>
+          </div>
+
+          <div class="day-box" id="d6">
+            <strong>S</strong>
+          </div>
+
+          <div class="day-box today" id="d7">
+            <strong>S</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="panel">
+
+        <h2>Continue Learning</h2>
+        <p class="panel-subtitle">
+          Pick up where you left off.
+        </p>
+
+        <div class="continue-card">
+
+          <div class="continue-top">
+
+            <div class="continue-info">
+              <h3 id="activeCourseName">
+                No Active Course
+              </h3>
+
+              <p id="activeCourseProgress">
+                Select a course to begin.
+              </p>
+            </div>
+
+            <svg class="progress-ring" viewBox="0 0 120 120">
+
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="10" />
+
+              <circle id="ringProgress" cx="60" cy="60" r="50" fill="none" stroke="#7c3aed" stroke-width="10"
+                stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)" />
+
+            </svg>
+
+          </div>
+
+          <button class="continue-btn" id="continueBtn">
+            Continue Learning
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <h2 class="section-title">
+        Your Courses
+      </h2>
+
+      <p class="course-group-title">
+        Available Mathematics Courses
+      </p>
+
+      <div class="courses-grid">
+
+        <!-- MATTE 1 -->
+
+        <article class="course-card active-course" data-course="matte1">
+
+          <div class="course-header">
+
+            <div class="course-badge c1a">
+              M1
+            </div>
+
+            <div>
+              <h3>Mathematics 1</h3>
+              <p>Fundamentals of Mathematics</p>
+            </div>
+
+          </div>
+
+          <div class="course-body">
+
+            <div class="course-chips">
+              <span class="chip">Algebra</span>
+              <span class="chip">Geometry</span>
+              <span class="chip">Numbers</span>
+            </div>
+
+            <div class="progress-bar">
+              <div class="progress-fill" id="pb-m1">
+              </div>
+            </div>
+
+            <div class="course-footer">
+
+              <span id="m1p">
+                0%
+              </span>
+
+              <button class="course-btn" onclick="setActiveCourse('matte1')">
+                Open
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- MATTE 2 -->
+
+        <article class="course-card" data-course="matte2">
+
+          <div class="course-header">
+
+            <div class="course-badge c2a">
+              M2
+            </div>
+
+            <div>
+              <h3>Mathematics 2</h3>
+              <p>Functions & Trigonometry</p>
+            </div>
+
+          </div>
+
+          <div class="course-body">
+
+            <div class="course-chips">
+              <span class="chip">Functions</span>
+              <span class="chip">Graphs</span>
+              <span class="chip">Trig</span>
+            </div>
+
+            <div class="progress-bar">
+              <div class="progress-fill" id="pb-m2">
+              </div>
+            </div>
+
+            <div class="course-footer">
+
+              <span id="m2p">
+                0%
+              </span>
+
+              <button class="course-btn" onclick="setActiveCourse('matte2')">
+                Open
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- MATTE 3 -->
+
+        <article class="course-card" data-course="matte3">
+
+          <div class="course-header">
+
+            <div class="course-badge c3a">
+              M3
+            </div>
+
+            <div>
+              <h3>Mathematics 3</h3>
+              <p>Advanced Algebra</p>
+            </div>
+
+          </div>
+
+          <div class="course-body">
+
+            <div class="course-chips">
+              <span class="chip">Equations</span>
+              <span class="chip">Polynomials</span>
+              <span class="chip">Analysis</span>
+            </div>
+
+            <div class="progress-bar">
+              <div class="progress-fill" id="pb-m3">
+              </div>
+            </div>
+
+            <div class="course-footer">
+
+              <span id="m3p">
+                0%
+              </span>
+
+              <button class="course-btn" onclick="setActiveCourse('matte3')">
+                Open
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <footer>
+
+      <div class="footer-logo">
+        <img src="/data/images/MathLogo.png" alt="Mathematics Hub Logo">
+
+        <span>
+          Mathematics Hub
+        </span>
+      </div>
+
+      <div class="footer-info">
+        <p>
+          &copy; 2026 Mathematics Hub.
+          All rights reserved.
+        </p>
+
+        <p>
+          Created as a final assignment
+          for the LBS course.
+        </p>
+      </div>
+
+      <div class="footer-links">
+
+        <a href="https://sms.schoolsoft.se/lbs/jsp/Login.jsp" target="_blank">
+          Schoolsoft
+        </a>
+
+        |
+
+        <a href="https://lbs.se/lund/program/teknikprogrammet/ai-webbutveckling/" target="_blank">
+          AI & Web Development
+        </a>
+
+      </div>
+
+      <div class="footer-social">
+
+        <a href="https://www.instagram.com/lbs_lund/" target="_blank">
+          Instagram
+        </a>
+
+        |
+
+        <a href="https://www.facebook.com/LBSLund/" target="_blank">
+          Facebook
+        </a>
+
+      </div>
+
+    </footer>
+
+</body>
+
+</html>
